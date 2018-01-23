@@ -1,0 +1,33 @@
+@beg
+"./mimg.so" dynload
+0 mimg
+loadimg
+255 0 0 img_color
+0 0 img_point
+@end
+
+0 128 128 img_color img_fill
+
+128 0 0 img_color 0 0 128 128 img_line
+
+128 128 img_point
+
+#@0            
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+"test.png" img_write
