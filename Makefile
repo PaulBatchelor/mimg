@@ -12,8 +12,8 @@ mimg.so: mimg.c
 	$(CC) $(CFLAGS) -shared $< -o $@ $(LDFLAGS) 
 
 install: mimg.so
-	mkdir -p $(HOME)/.runt/plugins
-	cp mimg.so $(HOME)/.runt/plugins
+	mkdir -p $(HOME)/.runt/plugins/monomer
+	cp mimg.so $(HOME)/.runt/plugins/monomer
 
 clean:
 	$(RM) mimg.so
