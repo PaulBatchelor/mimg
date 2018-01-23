@@ -57,7 +57,6 @@ static runt_int rproc_mimg(runt_vm *vm, runt_ptr p)
 
     monomer_gfxblk_set(pos, draw);
     monomer_gfxblk_size(pos, 16, 16);
-    /* monomer_gfxblk_key(pos, key); */
 }
 void pt(unsigned int x, unsigned int y)
 {
@@ -77,7 +76,6 @@ static runt_int rproc_loadimg(runt_vm *vm, runt_ptr p)
     kilo_set_statusmsg("Loaded img dictionary.");
     img_set_point_function(pt);
     img_setsize(128, 128);
-    data = (pixel *)img_get_data();
     return RUNT_OK;
 }
 
@@ -90,5 +88,6 @@ int rplug_mimg(runt_vm *vm)
     runt_keyword_define(vm, "mimg", 4, rproc_mimg, NULL);
     runt_keyword_define(vm, "loadimg", 7, rproc_loadimg, NULL); 
     kilo_set_statusmsg("Successfully loaded mimg.");
+    data = (pixel *)img_get_data();
     return RUNT_OK;
 }
